@@ -15,7 +15,7 @@ struct ListTabView: View {
     
     @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \LocalLandmark.title, ascending: true)])
     private var localLandmarks: FetchedResults<LocalLandmark>
-    
+
     var filteredSections: [(key: String, value: [LocalLandmark])] {
         Dictionary(grouping: localLandmarks, by: {$0.countryCode ?? "N/A"})
             .mapValues { $0.filter { $0.visited == (selectedVisited == 1) } }
@@ -30,14 +30,18 @@ struct ListTabView: View {
                     ForEach(filteredSections, id: \.key) { code, items in
                         Section(header: Text(getCountryFromCode(code))) {
                             ForEach(items) { item in
-                                NavigationLink(destination: LandmarkDetailView(landmark: item)) {
-                                    Text(item.title!)
+                                if let title = item.title {
+                                    NavigationLink(destination: LandmarkDetailView(landmark: item)) {
+                                        Text(title)
+                                    }
                                 }
                             }
                             .onDelete { deleteItem($0, items)}
                         }
                     }
                 }
+                // Added on 20/01/2021 to avoid weird animation on list refresh
+                .id(UUID())
                 .listStyle(InsetGroupedListStyle())
                 .navigationTitle("Mes lieux")
             }

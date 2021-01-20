@@ -75,10 +75,12 @@ struct MapView: UIViewRepresentable {
         
         if let modifiedLandmark = mapState.modifiedLandmark {
             updateLandmarkOnMap(view, modifiedLandmark, false)
+            mapState.modifiedLandmark = nil
         }
         
         if let deletedLandmark = mapState.deletedLandmark {
             updateLandmarkOnMap(view, deletedLandmark, true)
+            mapState.deletedLandmark = nil
             do { try viewContext.save() }
             catch { /*TODO*/ }
         }
@@ -205,8 +207,11 @@ extension MapView.Coordinator {
         if identifier == "SearchAnnotationCluster" {
             annotationView?.markerTintColor = .red
         } else if identifier == "UserAnnotationCluster" {
-            annotationView?.markerTintColor = .purple
-            annotationView?.displayPriority = .required
+            if let landmark = clusterAnnotation.memberAnnotations.first as? UserLandmark {
+                annotationView?.markerTintColor = landmark.visited ? .gray : .purple
+                annotationView?.displayPriority = .required
+            }
+           
         }
         return annotationView
     }

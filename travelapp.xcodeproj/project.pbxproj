@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58013BE925B899A200BEDA94 /* OnWillDisappear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58013BE825B899A200BEDA94 /* OnWillDisappear.swift */; };
+		58013BEA25B899A200BEDA94 /* OnWillDisappear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58013BE825B899A200BEDA94 /* OnWillDisappear.swift */; };
 		5807BD8A25A66BFC0018324C /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5807BD8925A66BFC0018324C /* Landmark.swift */; };
 		5827696E25B1BF8A0041AFE7 /* LandmarkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5827696D25B1BF8A0041AFE7 /* LandmarkDetail.swift */; };
 		5827696F25B1BF8A0041AFE7 /* LandmarkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5827696D25B1BF8A0041AFE7 /* LandmarkDetail.swift */; };
@@ -64,6 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		58013BE825B899A200BEDA94 /* OnWillDisappear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnWillDisappear.swift; sourceTree = "<group>"; };
 		5807BD8925A66BFC0018324C /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
 		5827696D25B1BF8A0041AFE7 /* LandmarkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetail.swift; sourceTree = "<group>"; };
 		58282BC825A5E908008208CF /* MapTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTab.swift; sourceTree = "<group>"; };
@@ -214,6 +217,7 @@
 			children = (
 				588C46A325A4B655002CF864 /* Color.swift */,
 				58CD960B25A46514007049F0 /* CornerRadius.swift */,
+				58013BE825B899A200BEDA94 /* OnWillDisappear.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -418,6 +422,7 @@
 				5807BD8A25A66BFC0018324C /* Landmark.swift in Sources */,
 				58CD960C25A46514007049F0 /* CornerRadius.swift in Sources */,
 				58282BC925A5E908008208CF /* MapTab.swift in Sources */,
+				58013BE925B899A200BEDA94 /* OnWillDisappear.swift in Sources */,
 				58471E5525A2255400629DB1 /* travelappApp.swift in Sources */,
 				58B2B53225AF42D50055ED1A /* Model.xcdatamodeld in Sources */,
 				588C469D25A4AF81002CF864 /* Search.swift in Sources */,
@@ -437,6 +442,7 @@
 				588C467E25A4A278002CF864 /* Map.swift in Sources */,
 				588C46DD25A4C567002CF864 /* MapTabViewModel.swift in Sources */,
 				588C468525A4A371002CF864 /* Blur.swift in Sources */,
+				58013BEA25B899A200BEDA94 /* OnWillDisappear.swift in Sources */,
 				58282BD525A5E912008208CF /* ListTab.swift in Sources */,
 				588C46CD25A4C4E0002CF864 /* MapButton.swift in Sources */,
 				584B394D25AF3CF30024CFBB /* Persistence.swift in Sources */,
@@ -599,7 +605,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = B6JWT5LX98;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
@@ -623,7 +629,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = B6JWT5LX98;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;

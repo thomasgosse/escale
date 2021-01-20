@@ -11,34 +11,54 @@ import MapKit
 struct LandmarkDetailView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @EnvironmentObject var mapState: MapState
-
     @ObservedObject var landmark: LocalLandmark
-    @State var selectedColor = 0
     
+    @State var title: String = ""
+    @State private var isVisited = false
+
     var body: some View {
         if !landmark.isFault {
-            VStack {
-                DetailViewMap(landmark)
-                    .edgesIgnoringSafeArea(.all)
-                    .frame(height: 200)
-                Text(landmark.title!)
-                if landmark.visited {
-                    Text("True")
-                } else {
-                    Text("False")
-                }
-                Button("Visited??") {
-                    landmark.visited.toggle()
-                    do {
-                        try viewContext.save()
-                        mapState.modifiedLandmark = landmark
-                    } catch {
-                        // let nsError = error as NSError
+            GeometryReader { geometry in
+                Form {
+                    Section(header: Text("Localisation")) {
+                        DetailViewMap(landmark)
+                            .cornerRadius(10)
+                            .frame(height: geometry.size.height / 3)
+                            .padding([.leading, .trailing], -14)
+                    }
+                    Section(header: Text("Informations du lieu")) {
+                        NavigationLink(destination: Text(landmark.title!)) {
+                            VStack(alignment: .leading, spacing: 3) {
+                                Text("Titre").font(.subheadline).foregroundColor(.secondaryLabel)
+                                Text(landmark.title!)
+                            }
+                        }
+                        NavigationLink(destination: Text(landmark.subtitle ?? "")) {
+                            VStack(alignment: .leading, spacing: 3) {
+                                Text("Sous-titre").font(.subheadline).foregroundColor(.secondaryLabel)
+                                Text(landmark.subtitle ?? "")
+                            }
+                        }
+                        Toggle(isOn: $isVisited.animation()) {
+                            if isVisited { Text("Visité")
+                            } else { Text("Non visité") }
+                        }
+                        .transition(.opacity)
+                        .padding([.top, .bottom], 3)
                     }
                 }
-                Spacer()
-            }.onDisappear {
-                mapState.modifiedLandmark = nil
+                .navigationBarTitle(landmark.title ?? "")
+                .onAppear { isVisited = landmark.visited }
+                .onWillDisappear {
+                    if landmark.visited == isVisited { return }
+                    landmark.visited = isVisited
+                    do {
+                       try viewContext.save()
+                       mapState.modifiedLandmark = landmark
+                    } catch {
+                       // let nsError = error as NSError
+                    }
+                }
             }
         }
     }
@@ -62,3 +82,4 @@ struct DetailViewMap: UIViewRepresentable {
     
     func updateUIView(_ view: MKMapView, context: Context) {}
 }
+
