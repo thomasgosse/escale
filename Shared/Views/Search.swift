@@ -12,11 +12,11 @@ import Combine
 
 struct SearchView: View {
     @Environment(\.presentationMode) var presentationMode
-    @EnvironmentObject private var mapState: MapState
-
+    
     @Binding var searchLandmarks: [SearchLandmark]
     @Binding var isPresented: Bool
     @Binding var query: String
+    @Binding var mapState: MapState
     
     @ObservedObject var viewModel = SearchViewModel()
     
@@ -56,6 +56,8 @@ struct SearchView: View {
                                 }
                             }
                         }
+                        // Added on 20/01/2021 to avoid weird animation on list refresh
+                        .id(UUID())
                     }
                 }
             }

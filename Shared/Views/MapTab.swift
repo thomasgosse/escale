@@ -22,12 +22,13 @@ struct MapTabView: View {
 }
 
 struct MapOverlay: View {
+    @EnvironmentObject var mapState: MapState
     @State var isSettingsPresented: Bool = false
     @State var isSearchPresented: Bool = false
     @State var query: String = ""
     
     @Binding var searchLandmarks: [SearchLandmark]
-        
+    
     func settingsAction () -> Void { isSettingsPresented = true }
     func searchAction () -> Void { isSearchPresented = true }
     func deleteAction () -> Void {
@@ -59,7 +60,8 @@ struct MapOverlay: View {
                         ),
                     action: searchLandmarks.count == 0 ? searchAction : deleteAction
                 ).sheet(isPresented: $isSearchPresented, content: {
-                    SearchView(searchLandmarks: $searchLandmarks, isPresented: $isSearchPresented, query: $query)
+                    SearchView(searchLandmarks: $searchLandmarks, isPresented: $isSearchPresented,
+                               query: $query, mapState: .constant(mapState))
                         .accentColor(.purple)
                 })
             }
