@@ -78,11 +78,19 @@ struct MapView: UIViewRepresentable {
             mapState.modifiedLandmark = nil
         }
         
+        if let focusLandmark = mapState.focusLandmark {
+            let center = CLLocationCoordinate2D(latitude: focusLandmark.latitude, longitude: focusLandmark.longitude)
+            view.setRegion(
+                MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)),
+                animated: false
+            )
+            mapState.focusLandmark = nil
+        }
+        
         if let deletedLandmark = mapState.deletedLandmark {
             updateLandmarkOnMap(view, deletedLandmark, true)
             mapState.deletedLandmark = nil
-            do { try viewContext.save() }
-            catch { /*TODO*/ }
+            try? viewContext.save()
         }
         
         if searchLandmarks.count == 0 {
@@ -95,7 +103,6 @@ struct MapView: UIViewRepresentable {
         let userLandmarks = localLandmarks.map { UserLandmark($0) }
         let newUserLandmarks = filterAlreadyAddedLandmarks(landmarks: userLandmarks, mapAnnotations: view.annotations)
         view.addAnnotations(newUserLandmarks)
-        
     }
 }
 
@@ -223,13 +230,13 @@ extension MapView.Coordinator {
         localLandmark.latitude = landmark.coordinate.latitude
         localLandmark.longitude = landmark.coordinate.longitude
         localLandmark.pointOfInterestCategory = landmark.pointOfInterestCategory?.rawValue
-        localLandmark.title = landmark.title
-        localLandmark.subtitle = landmark.subtitle
+        localLandmark.title = landmark.title ?? ""
+        localLandmark.subtitle = landmark.subtitle ?? ""
         localLandmark.visited = false
         do {
             try self.parent.viewContext.save()
         } catch {
-            // TODO
+            print(error)
         }
     }
 }

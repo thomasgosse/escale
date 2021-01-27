@@ -11,19 +11,23 @@ import MapKit
 
 
 struct ContentView: View {
+    @State private var selectedTab = 0
+    
     var body: some View {
-        TabView {
+        TabView(selection: $selectedTab) {
             MapTabView()
                 .tabItem {
                     Image(systemName:"map.fill")
                     Text("Carte")
                 }
+                .tag(0)
                 .accentColor(.blue)
-            ListTabView()
+            ListTabView(selectedTab: $selectedTab)
                 .tabItem {
                     Image(systemName:"mappin")
                     Text("Liste")
                 }
+                .tag(1)
                 .accentColor(.purple)
         }
         .accentColor(.label)
@@ -40,6 +44,7 @@ struct ContentView_Previews: PreviewProvider {
 final class MapState: ObservableObject {
     @Published var modifiedLandmark: LocalLandmark?
     @Published var deletedLandmark: LocalLandmark?
+    @Published var focusLandmark: LocalLandmark?
     @Published var region: MKCoordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 1.419, longitude: -3.691), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
 }
 

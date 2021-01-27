@@ -11,6 +11,8 @@ import SwiftUI
 struct ListTabView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @EnvironmentObject private var mapState: MapState
+    
+    @Binding var selectedTab: Int
     @State var selectedVisited = 0
     
     @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \LocalLandmark.title, ascending: true)])
@@ -31,7 +33,9 @@ struct ListTabView: View {
                         Section(header: Text(getCountryFromCode(code))) {
                             ForEach(items) { item in
                                 if let title = item.title {
-                                    NavigationLink(destination: LandmarkDetailView(landmark: item)) {
+                                    NavigationLink(
+                                        destination: LandmarkDetailView(landmark: item, selectedTab: $selectedTab)
+                                    ) {
                                         Text(title)
                                     }
                                 }

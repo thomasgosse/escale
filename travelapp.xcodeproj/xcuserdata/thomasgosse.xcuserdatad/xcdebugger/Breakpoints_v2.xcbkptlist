@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "D35A8EE7-BAE8-4686-A0FE-70BD23F51F8E"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "85855471-A10A-4078-8012-2E5A5E9EF91D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Shared/Views/Landmark/LandmarkEditor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "LandmarkEditorView"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7E015B59-C5DF-48DA-93B7-5AA36A46DF47"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Shared/Views/Landmark/LandmarkEditor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "LandmarkEditorView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "7E015B59-C5DF-48DA-93B7-5AA36A46DF47 - dc7a900f50c66f03"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of travelapp.LandmarkEditorView.landmark : travelapp.LocalLandmark"
+                  moduleName = "travelapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thomasgosse/Documents/thomas/travelapp/Shared/Views/Landmark/LandmarkEditor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "7E015B59-C5DF-48DA-93B7-5AA36A46DF47 - 9749c0ef845e4167"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "travelapp.LandmarkEditorView.landmark.getter : travelapp.LocalLandmark"
+                  moduleName = "travelapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thomasgosse/Documents/thomas/travelapp/Shared/Views/Landmark/LandmarkEditor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "74">
+               </Location>
+               <Location
+                  uuid = "7E015B59-C5DF-48DA-93B7-5AA36A46DF47 - 63c1aac2d9b0fe73"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "travelapp.LandmarkEditorView.landmark.setter : travelapp.LocalLandmark"
+                  moduleName = "travelapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thomasgosse/Documents/thomas/travelapp/Shared/Views/Landmark/LandmarkEditor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "109">
+               </Location>
+               <Location
+                  uuid = "7E015B59-C5DF-48DA-93B7-5AA36A46DF47 - 48dd6379d5caf574"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "travelapp.LandmarkEditorView.landmark.modify : travelapp.LocalLandmark"
+                  moduleName = "travelapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thomasgosse/Documents/thomas/travelapp/Shared/Views/Landmark/LandmarkEditor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "7E015B59-C5DF-48DA-93B7-5AA36A46DF47 - 3397e1334ecfcd6b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "travelapp.LandmarkEditorView.landmark.modify : travelapp.LocalLandmark with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "travelapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thomasgosse/Documents/thomas/travelapp/Shared/Views/Landmark/LandmarkEditor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "7E015B59-C5DF-48DA-93B7-5AA36A46DF47 - 8926f2ec5fdb1966"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "travelapp.LandmarkEditorView.$landmark.getter : SwiftUI.ObservedObject&lt;travelapp.LocalLandmark&gt;.Wrapper"
+                  moduleName = "travelapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thomasgosse/Documents/thomas/travelapp/Shared/Views/Landmark/LandmarkEditor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "127">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
