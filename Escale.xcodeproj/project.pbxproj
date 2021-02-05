@@ -22,14 +22,16 @@
 		583A312D25A5E4E700D5ECD1 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583A312B25A5E4E700D5ECD1 /* SearchViewModel.swift */; };
 		58471E4825A2255400629DB1 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58471E4725A2255400629DB1 /* Tests_iOS.swift */; };
 		58471E5325A2255400629DB1 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58471E5225A2255400629DB1 /* Tests_macOS.swift */; };
-		58471E5525A2255400629DB1 /* travelappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58471E2C25A2255300629DB1 /* travelappApp.swift */; };
-		58471E5625A2255400629DB1 /* travelappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58471E2C25A2255300629DB1 /* travelappApp.swift */; };
+		58471E5525A2255400629DB1 /* Escale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58471E2C25A2255300629DB1 /* Escale.swift */; };
+		58471E5625A2255400629DB1 /* Escale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58471E2C25A2255300629DB1 /* Escale.swift */; };
 		58471E5725A2255400629DB1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58471E2D25A2255300629DB1 /* ContentView.swift */; };
 		58471E5825A2255400629DB1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58471E2D25A2255300629DB1 /* ContentView.swift */; };
 		58471E5925A2255400629DB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58471E2E25A2255400629DB1 /* Assets.xcassets */; };
 		58471E5A25A2255400629DB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58471E2E25A2255400629DB1 /* Assets.xcassets */; };
 		5848308025BB2CDF00DD37FE /* CardStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5848307F25BB2CDF00DD37FE /* CardStyle.swift */; };
 		5848308125BB2CDF00DD37FE /* CardStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5848307F25BB2CDF00DD37FE /* CardStyle.swift */; };
+		58491DEF25CDB47D00D0C4CD /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58491DEE25CDB47D00D0C4CD /* TextView.swift */; };
+		58491DF025CDB47D00D0C4CD /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58491DEE25CDB47D00D0C4CD /* TextView.swift */; };
 		584B394C25AF3CF30024CFBB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584B394B25AF3CF30024CFBB /* Persistence.swift */; };
 		584B394D25AF3CF30024CFBB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584B394B25AF3CF30024CFBB /* Persistence.swift */; };
 		5865698425BB13E800B896E5 /* LandmarkEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5865698325BB13E800B896E5 /* LandmarkEditor.swift */; };
@@ -83,12 +85,12 @@
 		58282BC825A5E908008208CF /* MapTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTab.swift; sourceTree = "<group>"; };
 		58282BD325A5E912008208CF /* ListTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTab.swift; sourceTree = "<group>"; };
 		583A312B25A5E4E700D5ECD1 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
-		58471E2C25A2255300629DB1 /* travelappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = travelappApp.swift; sourceTree = "<group>"; };
+		58471E2C25A2255300629DB1 /* Escale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Escale.swift; sourceTree = "<group>"; };
 		58471E2D25A2255300629DB1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		58471E2E25A2255400629DB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		58471E3325A2255400629DB1 /* travelapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = travelapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		58471E3325A2255400629DB1 /* Escale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Escale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58471E3625A2255400629DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		58471E3B25A2255400629DB1 /* travelapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = travelapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		58471E3B25A2255400629DB1 /* Escale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Escale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58471E3D25A2255400629DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58471E3E25A2255400629DB1 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		58471E4325A2255400629DB1 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +100,7 @@
 		58471E5225A2255400629DB1 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		58471E5425A2255400629DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5848307F25BB2CDF00DD37FE /* CardStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStyle.swift; sourceTree = "<group>"; };
+		58491DEE25CDB47D00D0C4CD /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		584B394B25AF3CF30024CFBB /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		5865698325BB13E800B896E5 /* LandmarkEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkEditor.swift; sourceTree = "<group>"; };
 		5865698A25BB140E00B896E5 /* LandmarkSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkSummary.swift; sourceTree = "<group>"; };
@@ -172,7 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				58471E2E25A2255400629DB1 /* Assets.xcassets */,
-				58471E2C25A2255300629DB1 /* travelappApp.swift */,
+				58471E2C25A2255300629DB1 /* Escale.swift */,
 				58471E2D25A2255300629DB1 /* ContentView.swift */,
 				584B394B25AF3CF30024CFBB /* Persistence.swift */,
 				588C46CA25A4C482002CF864 /* Views */,
@@ -187,8 +190,8 @@
 		58471E3425A2255400629DB1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				58471E3325A2255400629DB1 /* travelapp.app */,
-				58471E3B25A2255400629DB1 /* travelapp.app */,
+				58471E3325A2255400629DB1 /* Escale.app */,
+				58471E3B25A2255400629DB1 /* Escale.app */,
 				58471E4325A2255400629DB1 /* Tests iOS.xctest */,
 				58471E4E25A2255400629DB1 /* Tests macOS.xctest */,
 			);
@@ -247,6 +250,7 @@
 				58CD960B25A46514007049F0 /* CornerRadius.swift */,
 				58013BE825B899A200BEDA94 /* OnWillDisappear.swift */,
 				5848307F25BB2CDF00DD37FE /* CardStyle.swift */,
+				58491DEE25CDB47D00D0C4CD /* TextView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -287,9 +291,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		58471E3225A2255400629DB1 /* travelapp (iOS) */ = {
+		58471E3225A2255400629DB1 /* Escale (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 58471E5D25A2255400629DB1 /* Build configuration list for PBXNativeTarget "travelapp (iOS)" */;
+			buildConfigurationList = 58471E5D25A2255400629DB1 /* Build configuration list for PBXNativeTarget "Escale (iOS)" */;
 			buildPhases = (
 				58471E2F25A2255400629DB1 /* Sources */,
 				58471E3025A2255400629DB1 /* Frameworks */,
@@ -299,14 +303,14 @@
 			);
 			dependencies = (
 			);
-			name = "travelapp (iOS)";
+			name = "Escale (iOS)";
 			productName = "travelapp (iOS)";
-			productReference = 58471E3325A2255400629DB1 /* travelapp.app */;
+			productReference = 58471E3325A2255400629DB1 /* Escale.app */;
 			productType = "com.apple.product-type.application";
 		};
-		58471E3A25A2255400629DB1 /* travelapp (macOS) */ = {
+		58471E3A25A2255400629DB1 /* Escale (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 58471E6025A2255400629DB1 /* Build configuration list for PBXNativeTarget "travelapp (macOS)" */;
+			buildConfigurationList = 58471E6025A2255400629DB1 /* Build configuration list for PBXNativeTarget "Escale (macOS)" */;
 			buildPhases = (
 				58471E3725A2255400629DB1 /* Sources */,
 				58471E3825A2255400629DB1 /* Frameworks */,
@@ -316,9 +320,9 @@
 			);
 			dependencies = (
 			);
-			name = "travelapp (macOS)";
+			name = "Escale (macOS)";
 			productName = "travelapp (macOS)";
-			productReference = 58471E3B25A2255400629DB1 /* travelapp.app */;
+			productReference = 58471E3B25A2255400629DB1 /* Escale.app */;
 			productType = "com.apple.product-type.application";
 		};
 		58471E4225A2255400629DB1 /* Tests iOS */ = {
@@ -382,7 +386,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 58471E2A25A2255300629DB1 /* Build configuration list for PBXProject "travelapp" */;
+			buildConfigurationList = 58471E2A25A2255300629DB1 /* Build configuration list for PBXProject "Escale" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -395,8 +399,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				58471E3225A2255400629DB1 /* travelapp (iOS) */,
-				58471E3A25A2255400629DB1 /* travelapp (macOS) */,
+				58471E3225A2255400629DB1 /* Escale (iOS) */,
+				58471E3A25A2255400629DB1 /* Escale (macOS) */,
 				58471E4225A2255400629DB1 /* Tests iOS */,
 				58471E4D25A2255400629DB1 /* Tests macOS */,
 			);
@@ -452,12 +456,13 @@
 				5865698B25BB140E00B896E5 /* LandmarkSummary.swift in Sources */,
 				5865698425BB13E800B896E5 /* LandmarkEditor.swift in Sources */,
 				588C46CC25A4C4E0002CF864 /* MapButton.swift in Sources */,
+				58491DEF25CDB47D00D0C4CD /* TextView.swift in Sources */,
 				5807BD8A25A66BFC0018324C /* Landmark.swift in Sources */,
 				58CD960C25A46514007049F0 /* CornerRadius.swift in Sources */,
 				5848308025BB2CDF00DD37FE /* CardStyle.swift in Sources */,
 				58282BC925A5E908008208CF /* MapTab.swift in Sources */,
 				58013BE925B899A200BEDA94 /* OnWillDisappear.swift in Sources */,
-				58471E5525A2255400629DB1 /* travelappApp.swift in Sources */,
+				58471E5525A2255400629DB1 /* Escale.swift in Sources */,
 				58B2B53225AF42D50055ED1A /* Model.xcdatamodeld in Sources */,
 				588C469D25A4AF81002CF864 /* Search.swift in Sources */,
 				58EEA7BB25B9F22D0047E81F /* LocalLandmark+CoreDataClass.swift in Sources */,
@@ -485,8 +490,9 @@
 				584B394D25AF3CF30024CFBB /* Persistence.swift in Sources */,
 				58CD960D25A46514007049F0 /* CornerRadius.swift in Sources */,
 				58282BCA25A5E908008208CF /* MapTab.swift in Sources */,
-				58471E5625A2255400629DB1 /* travelappApp.swift in Sources */,
+				58471E5625A2255400629DB1 /* Escale.swift in Sources */,
 				588C469E25A4AF81002CF864 /* Search.swift in Sources */,
+				58491DF025CDB47D00D0C4CD /* TextView.swift in Sources */,
 				58241C9D25BF20FC00126BED /* DirectionButton.swift in Sources */,
 				5865698525BB13E800B896E5 /* LandmarkEditor.swift in Sources */,
 				583A312D25A5E4E700D5ECD1 /* SearchViewModel.swift in Sources */,
@@ -517,12 +523,12 @@
 /* Begin PBXTargetDependency section */
 		58471E4525A2255400629DB1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 58471E3225A2255400629DB1 /* travelapp (iOS) */;
+			target = 58471E3225A2255400629DB1 /* Escale (iOS) */;
 			targetProxy = 58471E4425A2255400629DB1 /* PBXContainerItemProxy */;
 		};
 		58471E5025A2255400629DB1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 58471E3A25A2255400629DB1 /* travelapp (macOS) */;
+			target = 58471E3A25A2255400629DB1 /* Escale (macOS) */;
 			targetProxy = 58471E4F25A2255400629DB1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -645,7 +651,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = B6JWT5LX98;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
@@ -655,11 +661,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.travelllapp;
-				PRODUCT_NAME = travelapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.escale;
+				PRODUCT_NAME = Escale;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -669,7 +675,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = B6JWT5LX98;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
@@ -679,11 +685,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.travelllapp;
-				PRODUCT_NAME = travelapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.escale;
+				PRODUCT_NAME = Escale;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -705,8 +711,8 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tgosse.travelapp;
-				PRODUCT_NAME = travelapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.escale;
+				PRODUCT_NAME = Escale;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
@@ -729,8 +735,8 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tgosse.travelapp;
-				PRODUCT_NAME = travelapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.escale;
+				PRODUCT_NAME = Escale;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
@@ -754,7 +760,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "travelapp (iOS)";
+				TEST_TARGET_NAME = "Escale (iOS)";
 			};
 			name = Debug;
 		};
@@ -776,7 +782,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "travelapp (iOS)";
+				TEST_TARGET_NAME = "Escale (iOS)";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -799,7 +805,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "travelapp (macOS)";
+				TEST_TARGET_NAME = "Escale (macOS)";
 			};
 			name = Debug;
 		};
@@ -821,14 +827,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "travelapp (macOS)";
+				TEST_TARGET_NAME = "Escale (macOS)";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		58471E2A25A2255300629DB1 /* Build configuration list for PBXProject "travelapp" */ = {
+		58471E2A25A2255300629DB1 /* Build configuration list for PBXProject "Escale" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				58471E5B25A2255400629DB1 /* Debug */,
@@ -837,7 +843,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		58471E5D25A2255400629DB1 /* Build configuration list for PBXNativeTarget "travelapp (iOS)" */ = {
+		58471E5D25A2255400629DB1 /* Build configuration list for PBXNativeTarget "Escale (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				58471E5E25A2255400629DB1 /* Debug */,
@@ -846,7 +852,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		58471E6025A2255400629DB1 /* Build configuration list for PBXNativeTarget "travelapp (macOS)" */ = {
+		58471E6025A2255400629DB1 /* Build configuration list for PBXNativeTarget "Escale (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				58471E6125A2255400629DB1 /* Debug */,

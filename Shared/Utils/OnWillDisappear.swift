@@ -1,6 +1,6 @@
 //
 //  OnWillDisapear.swift
-//  travelapp
+//  Escale
 //
 //  Created by Thomas Gosse on 20/01/2021.
 //

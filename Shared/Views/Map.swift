@@ -1,6 +1,6 @@
 //
 //  MapView.swift
-//  travelapp
+//  Escale
 //
 //  Created by Thomas Gosse on 05/01/2021.
 //
@@ -192,7 +192,7 @@ extension MapView.Coordinator {
         let identifier = landmark is UserLandmark ? "UserAnnotation" : "SearchAnnotation"
         let annotationView = getMarkerAnnotation(mapView, annotation, identifier)
         if landmark is SearchLandmark {
-            annotationView?.markerTintColor = .red
+            annotationView?.markerTintColor = .systemIndigo
             annotationView?.clusteringIdentifier = identifier
             annotationView?.rightCalloutAccessoryView = UIButton(type: .contactAdd)
         } else if let l = landmark as? UserLandmark {
@@ -212,7 +212,7 @@ extension MapView.Coordinator {
         let identifier = clusterAnnotation.memberAnnotations.first is UserLandmark ? "UserAnnotationCluster" : "SearchAnnotationCluster"
         let annotationView = getMarkerAnnotation(mapView, clusterAnnotation, identifier)
         if identifier == "SearchAnnotationCluster" {
-            annotationView?.markerTintColor = .red
+            annotationView?.markerTintColor = .systemIndigo
         } else if identifier == "UserAnnotationCluster" {
             if let landmark = clusterAnnotation.memberAnnotations.first as? UserLandmark {
                 annotationView?.markerTintColor = landmark.visited ? .gray : .purple

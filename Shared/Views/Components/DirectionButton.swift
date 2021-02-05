@@ -1,6 +1,6 @@
 //
 //  DirectionButton.swift
-//  travelapp
+//  Escale
 //
 //  Created by Thomas Gosse on 25/01/2021.
 //

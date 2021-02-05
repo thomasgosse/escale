@@ -1,5 +1,5 @@
 //
-//  travelappApp.swift
+//  Escale.swift
 //  Shared
 //
 //  Created by Thomas Gosse on 03/01/2021.
@@ -9,7 +9,7 @@ import SwiftUI
 
 
 @main
-struct travelappApp: App {
+struct Escale: App {
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {

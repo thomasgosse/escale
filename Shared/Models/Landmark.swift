@@ -1,6 +1,6 @@
 //
 //  Landmark.swift
-//  travelapp (iOS)
+//  Escale (iOS)
 //
 //  Created by Thomas Gosse on 06/01/2021.
 //

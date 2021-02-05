@@ -1,6 +1,6 @@
 //
 //  LocalLandmark+CoreDataClass.swift
-//  travelapp (iOS)
+//  Escale (iOS)
 //
 //  Created by Thomas Gosse on 21/01/2021.
 //

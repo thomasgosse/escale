@@ -1,6 +1,6 @@
 //
 //  CardStyle.swift
-//  travelapp
+//  Escale
 //
 //  Created by Thomas Gosse on 22/01/2021.
 //

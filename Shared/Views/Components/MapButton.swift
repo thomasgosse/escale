@@ -1,6 +1,6 @@
 //
 //  MapButton.swift
-//  travelapp
+//  Escale
 //
 //  Created by Thomas Gosse on 05/01/2021.
 //
