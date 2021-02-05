@@ -1,6 +1,6 @@
 //
 //  LandmarkDetail.swift
-//  travelapp
+//  Escale
 //
 //  Created by Thomas Gosse on 15/01/2021.
 //

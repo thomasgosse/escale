@@ -1,6 +1,6 @@
 //
 //  LandmarkSummary.swift
-//  travelapp
+//  Escale
 //
 //  Created by Thomas Gosse on 22/01/2021.
 //
@@ -31,11 +31,11 @@ struct LandmarkSummaryView: View {
                     Text("Complément").font(.subheadline).foregroundColor(.secondaryLabel)
                     Text(landmark.subtitle)
                 }
-                Divider()
-
-                VStack(alignment: .leading, spacing: 3) {
-                    Text("Lien").font(.subheadline).foregroundColor(.secondaryLabel)
-                    if let url = landmark.url {
+                
+                if let url = landmark.url, !url.absoluteString.isEmpty {
+                    Divider()
+                    VStack(alignment: .leading, spacing: 3) {
+                        Text("Lien").font(.subheadline).foregroundColor(.secondaryLabel)
                         Link(url.absoluteString, destination: url)
                         if !UIApplication.shared.canOpenURL(url) {
                             HStack {
@@ -43,16 +43,18 @@ struct LandmarkSummaryView: View {
                                 Text("Ce lien n'est pas valide")
                             }
                         }
-                    } else {
-                        Text("")
                     }
                 }
-                Divider()
+              
 
-                VStack(alignment: .leading, spacing: 3) {
-                    Text("Note personnelle").font(.subheadline).foregroundColor(.secondaryLabel)
-                    Text(landmark.personalNote)
+                if !landmark.personalNote.isEmpty {
+                    Divider()
+                    VStack(alignment: .leading, spacing: 3) {
+                        Text("Note personnelle").font(.subheadline).foregroundColor(.secondaryLabel)
+                        Text(landmark.personalNote)
+                    }
                 }
+            
             }
             .cardStyle(paddingX: 15, paddingY: 10)
             .frame(maxWidth: .infinity, alignment: .leading)
