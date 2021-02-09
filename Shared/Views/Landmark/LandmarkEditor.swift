@@ -13,6 +13,7 @@ struct LandmarkEditorView: View {
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject var landmark: LocalLandmark
     
+    
     @State private var title: String
     @State private var subtitle: String
     @State private var personalNote: String

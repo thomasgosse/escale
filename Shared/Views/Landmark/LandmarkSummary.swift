@@ -22,16 +22,9 @@ struct LandmarkSummaryView: View {
                 .foregroundColor(.secondaryLabel)
                 .padding([.leading])
             VStack(alignment: .leading, spacing: 7) {
-                VStack(alignment: .leading, spacing: 3) {
-                    Text("Nom").font(.subheadline).foregroundColor(.secondaryLabel)
-                    Text(landmark.title)
-                }
+                TextLabel(landmark.title, "Nom")
                 Divider()
-                VStack(alignment: .leading, spacing: 3) {
-                    Text("Complément").font(.subheadline).foregroundColor(.secondaryLabel)
-                    Text(landmark.subtitle)
-                }
-                
+                TextLabel(landmark.subtitle, "Complément")
                 if let url = landmark.url, !url.absoluteString.isEmpty {
                     Divider()
                     VStack(alignment: .leading, spacing: 3) {
@@ -45,16 +38,11 @@ struct LandmarkSummaryView: View {
                         }
                     }
                 }
-              
-
+                
                 if !landmark.personalNote.isEmpty {
                     Divider()
-                    VStack(alignment: .leading, spacing: 3) {
-                        Text("Note personnelle").font(.subheadline).foregroundColor(.secondaryLabel)
-                        Text(landmark.personalNote)
-                    }
+                    TextLabel(landmark.personalNote, "Note personnelle")
                 }
-            
             }
             .cardStyle(paddingX: 15, paddingY: 10)
             .frame(maxWidth: .infinity, alignment: .leading)

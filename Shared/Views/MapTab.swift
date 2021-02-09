@@ -44,7 +44,7 @@ struct MapOverlay: View {
                     .accentColor(.systemGray),
                 action: settingsAction
             ) .sheet(isPresented: $isSettingsPresented, content: {
-                SettingsSheetView()
+                SettingsView()
                     .accentColor(.purple)
             })
             .padding(.top, 20)

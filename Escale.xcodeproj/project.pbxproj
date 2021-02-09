@@ -42,8 +42,8 @@
 		588C467E25A4A278002CF864 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588C467C25A4A278002CF864 /* Map.swift */; };
 		588C468425A4A370002CF864 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588C468325A4A370002CF864 /* Blur.swift */; };
 		588C468525A4A371002CF864 /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588C468325A4A370002CF864 /* Blur.swift */; };
-		588C469625A4A86B002CF864 /* SettingsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588C469525A4A86B002CF864 /* SettingsSheet.swift */; };
-		588C469725A4A86B002CF864 /* SettingsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588C469525A4A86B002CF864 /* SettingsSheet.swift */; };
+		588C469625A4A86B002CF864 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588C469525A4A86B002CF864 /* Settings.swift */; };
+		588C469725A4A86B002CF864 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588C469525A4A86B002CF864 /* Settings.swift */; };
 		588C469D25A4AF81002CF864 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588C469C25A4AF81002CF864 /* Search.swift */; };
 		588C469E25A4AF81002CF864 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588C469C25A4AF81002CF864 /* Search.swift */; };
 		588C46A425A4B655002CF864 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588C46A325A4B655002CF864 /* Color.swift */; };
@@ -56,8 +56,14 @@
 		58B2B53325AF42D50055ED1A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 58B2B53025AF42D50055ED1A /* Model.xcdatamodeld */; };
 		58CD960C25A46514007049F0 /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CD960B25A46514007049F0 /* CornerRadius.swift */; };
 		58CD960D25A46514007049F0 /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CD960B25A46514007049F0 /* CornerRadius.swift */; };
+		58D4C04F25D1C872009AF105 /* SettingsSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D4C04E25D1C872009AF105 /* SettingsSummary.swift */; };
+		58D4C05025D1C872009AF105 /* SettingsSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D4C04E25D1C872009AF105 /* SettingsSummary.swift */; };
+		58D4C05A25D1CB14009AF105 /* TextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D4C05925D1CB14009AF105 /* TextLabel.swift */; };
+		58D4C05B25D1CB14009AF105 /* TextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D4C05925D1CB14009AF105 /* TextLabel.swift */; };
 		58EEA7BB25B9F22D0047E81F /* LocalLandmark+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EEA7B925B9F22D0047E81F /* LocalLandmark+CoreDataClass.swift */; };
 		58EEA7BC25B9F22D0047E81F /* LocalLandmark+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EEA7BA25B9F22D0047E81F /* LocalLandmark+CoreDataProperties.swift */; };
+		58F6C48725D090E0001C0863 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F6C48625D090E0001C0863 /* Stats.swift */; };
+		58F6C48825D090E0001C0863 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F6C48625D090E0001C0863 /* Stats.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,15 +112,18 @@
 		5865698A25BB140E00B896E5 /* LandmarkSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkSummary.swift; sourceTree = "<group>"; };
 		588C467C25A4A278002CF864 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		588C468325A4A370002CF864 /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
-		588C469525A4A86B002CF864 /* SettingsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSheet.swift; sourceTree = "<group>"; };
+		588C469525A4A86B002CF864 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		588C469C25A4AF81002CF864 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		588C46A325A4B655002CF864 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		588C46CB25A4C4E0002CF864 /* MapButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapButton.swift; sourceTree = "<group>"; };
 		588C46DB25A4C567002CF864 /* MapTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTabViewModel.swift; sourceTree = "<group>"; };
 		58B2B53125AF42D50055ED1A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		58CD960B25A46514007049F0 /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
+		58D4C04E25D1C872009AF105 /* SettingsSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSummary.swift; sourceTree = "<group>"; };
+		58D4C05925D1CB14009AF105 /* TextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLabel.swift; sourceTree = "<group>"; };
 		58EEA7B925B9F22D0047E81F /* LocalLandmark+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalLandmark+CoreDataClass.swift"; sourceTree = "<group>"; };
 		58EEA7BA25B9F22D0047E81F /* LocalLandmark+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalLandmark+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		58F6C48625D090E0001C0863 /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,7 +271,7 @@
 				588C467C25A4A278002CF864 /* Map.swift */,
 				588C469C25A4AF81002CF864 /* Search.swift */,
 				58282BD325A5E912008208CF /* ListTab.swift */,
-				588C469525A4A86B002CF864 /* SettingsSheet.swift */,
+				58D4C04925D1C826009AF105 /* Settings */,
 				5865697E25BB134F00B896E5 /* Landmark */,
 				58E6316F25A664AD00A75ED4 /* Components */,
 			);
@@ -278,12 +287,23 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		58D4C04925D1C826009AF105 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				588C469525A4A86B002CF864 /* Settings.swift */,
+				58D4C04E25D1C872009AF105 /* SettingsSummary.swift */,
+				58F6C48625D090E0001C0863 /* Stats.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		58E6316F25A664AD00A75ED4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				588C46CB25A4C4E0002CF864 /* MapButton.swift */,
 				588C468325A4A370002CF864 /* Blur.swift */,
 				58241C9B25BF20FC00126BED /* DirectionButton.swift */,
+				58D4C05925D1CB14009AF105 /* TextLabel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -368,7 +388,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1230;
-				LastUpgradeCheck = 1230;
+				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					58471E3225A2255400629DB1 = {
 						CreatedOnToolsVersion = 12.3;
@@ -445,11 +465,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				588C469625A4A86B002CF864 /* SettingsSheet.swift in Sources */,
+				588C469625A4A86B002CF864 /* Settings.swift in Sources */,
+				58D4C04F25D1C872009AF105 /* SettingsSummary.swift in Sources */,
+				58F6C48725D090E0001C0863 /* Stats.swift in Sources */,
 				58EEA7BC25B9F22D0047E81F /* LocalLandmark+CoreDataProperties.swift in Sources */,
 				58471E5725A2255400629DB1 /* ContentView.swift in Sources */,
 				588C467D25A4A278002CF864 /* Map.swift in Sources */,
 				588C46DC25A4C567002CF864 /* MapTabViewModel.swift in Sources */,
+				58D4C05A25D1CB14009AF105 /* TextLabel.swift in Sources */,
 				5827696E25B1BF8A0041AFE7 /* LandmarkDetail.swift in Sources */,
 				588C468425A4A370002CF864 /* Blur.swift in Sources */,
 				58282BD425A5E912008208CF /* ListTab.swift in Sources */,
@@ -478,23 +501,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				5865698C25BB140E00B896E5 /* LandmarkSummary.swift in Sources */,
-				588C469725A4A86B002CF864 /* SettingsSheet.swift in Sources */,
+				588C469725A4A86B002CF864 /* Settings.swift in Sources */,
 				58471E5825A2255400629DB1 /* ContentView.swift in Sources */,
 				58B2B53325AF42D50055ED1A /* Model.xcdatamodeld in Sources */,
 				588C467E25A4A278002CF864 /* Map.swift in Sources */,
 				588C46DD25A4C567002CF864 /* MapTabViewModel.swift in Sources */,
 				588C468525A4A371002CF864 /* Blur.swift in Sources */,
+				58D4C05025D1C872009AF105 /* SettingsSummary.swift in Sources */,
 				58013BEA25B899A200BEDA94 /* OnWillDisappear.swift in Sources */,
 				58282BD525A5E912008208CF /* ListTab.swift in Sources */,
 				588C46CD25A4C4E0002CF864 /* MapButton.swift in Sources */,
 				584B394D25AF3CF30024CFBB /* Persistence.swift in Sources */,
 				58CD960D25A46514007049F0 /* CornerRadius.swift in Sources */,
 				58282BCA25A5E908008208CF /* MapTab.swift in Sources */,
+				58F6C48825D090E0001C0863 /* Stats.swift in Sources */,
 				58471E5625A2255400629DB1 /* Escale.swift in Sources */,
 				588C469E25A4AF81002CF864 /* Search.swift in Sources */,
 				58491DF025CDB47D00D0C4CD /* TextView.swift in Sources */,
 				58241C9D25BF20FC00126BED /* DirectionButton.swift in Sources */,
 				5865698525BB13E800B896E5 /* LandmarkEditor.swift in Sources */,
+				58D4C05B25D1CB14009AF105 /* TextLabel.swift in Sources */,
 				583A312D25A5E4E700D5ECD1 /* SearchViewModel.swift in Sources */,
 				5848308125BB2CDF00DD37FE /* CardStyle.swift in Sources */,
 				5827696F25B1BF8A0041AFE7 /* LandmarkDetail.swift in Sources */,
@@ -700,6 +726,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B6JWT5LX98;
@@ -724,6 +751,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B6JWT5LX98;
