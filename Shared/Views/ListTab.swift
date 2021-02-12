@@ -17,7 +17,7 @@ struct ListTabView: View {
     
     @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \LocalLandmark.title, ascending: true)])
     private var localLandmarks: FetchedResults<LocalLandmark>
-
+    
     var filteredSections: [(key: String, value: [LocalLandmark])] {
         Dictionary(grouping: localLandmarks, by: {$0.countryCode ?? "N/A"})
             .mapValues { $0.filter { $0.visited == (selectedVisited == 1) } }
@@ -28,27 +28,31 @@ struct ListTabView: View {
     var body: some View {
         NavigationView {
             VStack {
-                List {
-                    ForEach(filteredSections, id: \.key) { code, items in
-                        Section(header: Text(getCountryFromCode(code))) {
-                            ForEach(items) { item in
-                                if let title = item.title {
-                                    NavigationLink(
-                                        destination: LandmarkDetailView(landmark: item, selectedTab: $selectedTab)
-                                    ) {
-                                        Text(title)
+                if filteredSections.isEmpty {
+                    EmptyList(selectedTab: $selectedTab)
+                } else {
+                    List {
+                        ForEach(filteredSections, id: \.key) { code, items in
+                            Section(header: Text(getCountryFromCode(code))) {
+                                ForEach(items) { item in
+                                    if let title = item.title {
+                                        NavigationLink(
+                                            destination: LandmarkDetailView(landmark: item, selectedTab: $selectedTab)
+                                        ) {
+                                            Text(title)
+                                        }
                                     }
                                 }
+                                .onDelete { deleteItem($0, items)}
                             }
-                            .onDelete { deleteItem($0, items)}
                         }
                     }
+                    // Added on 20/01/2021 to avoid weird animation on list refresh
+                    .id(UUID())
+                    .listStyle(InsetGroupedListStyle())
                 }
-                // Added on 20/01/2021 to avoid weird animation on list refresh
-                .id(UUID())
-                .listStyle(InsetGroupedListStyle())
-                .navigationTitle("Mes lieux")
             }
+            .navigationTitle("Mes lieux")
             .toolbar {
                 ToolbarItem(placement: .principal) {
                     Picker(selection: $selectedVisited, label: Text("To visit or not?")) {
@@ -76,6 +80,18 @@ struct ListTabView: View {
                 mapState.deletedLandmark = items[index]
                 viewContext.delete(items[index])
             }
+        }
+    }
+}
+
+
+struct EmptyList: View {
+    @Binding var selectedTab: Int
+    
+    var body: some View {
+        Text("Tu n'as pas encore ajouté de lieux...")
+        Button("Ajoutes-en un !") {
+            selectedTab = 0
         }
     }
 }

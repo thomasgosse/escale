@@ -12,7 +12,8 @@ import MapKit
 struct MapView: UIViewRepresentable {
     @Environment(\.managedObjectContext) private var viewContext
     @EnvironmentObject private var mapState: MapState
-    
+    @Binding var mapType: MKMapType
+
     @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \LocalLandmark.title, ascending: true)])
     private var localLandmarks: FetchedResults<LocalLandmark>
     
@@ -67,10 +68,14 @@ struct MapView: UIViewRepresentable {
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView(frame: .zero)
         mapView.delegate = context.coordinator
+        mapView.mapType = mapType
         return mapView
     }
     
     func updateUIView(_ view: MKMapView, context: Context) {
+        if view.mapType != mapType {
+            view.mapType = mapType
+        }
         view.showsUserLocation = true
         
         if let modifiedLandmark = mapState.modifiedLandmark {
@@ -233,10 +238,6 @@ extension MapView.Coordinator {
         localLandmark.title = landmark.title ?? ""
         localLandmark.subtitle = landmark.subtitle ?? ""
         localLandmark.visited = false
-        do {
-            try self.parent.viewContext.save()
-        } catch {
-            print(error)
-        }
+        try? self.parent.viewContext.save()
     }
 }

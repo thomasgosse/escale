@@ -2,7 +2,7 @@
 //  LocalLandmark+CoreDataClass.swift
 //  Escale (iOS)
 //
-//  Created by Thomas Gosse on 21/01/2021.
+//  Created by Thomas Gosse on 12/02/2021.
 //
 //
 

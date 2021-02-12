@@ -8,6 +8,7 @@
 import SwiftUI
 import CoreData
 import MapKit
+import Combine
 
 
 struct ContentView: View {
@@ -32,6 +33,8 @@ struct ContentView: View {
         }
         .accentColor(.label)
         .environmentObject(MapState())
+        .environmentObject(LocationManager())
+        .environmentObject(UserSettings())
     }
 }
 
@@ -46,6 +49,37 @@ final class MapState: ObservableObject {
     @Published var deletedLandmark: LocalLandmark?
     @Published var focusLandmark: LocalLandmark?
     @Published var region: MKCoordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 1.419, longitude: -3.691), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
+}
+
+class UserSettings: ObservableObject {
+    @Published var mapType: MKMapType {
+        didSet {
+            self.mapTypeAsString = UserSettings.getStringFromMapType(mapType)
+            UserDefaults.standard.set(mapType.rawValue, forKey: "mapType")
+        }
+    }
+    
+    @Published var mapTypeAsString: String
+    
+    init() {
+        let mapTypeString = UserDefaults.standard.string(forKey: "mapType") ?? ""
+        let mapTypeRaw = UInt(mapTypeString) ?? 0
+        self.mapType = MKMapType(rawValue: mapTypeRaw) ?? .standard
+        self.mapTypeAsString = UserSettings.getStringFromMapType(MKMapType(rawValue: mapTypeRaw) ?? .standard)
+    }
+    
+    static func getStringFromMapType(_ mapType: MKMapType) -> String {
+        switch mapType {
+        case .standard:
+            return "Standard"
+        case .satelliteFlyover:
+            return "Satellite 3D"
+        case .satellite:
+            return "Satellite"
+        default:
+            return "Autre"
+        }
+    }
 }
 
 extension UITabBarController {
