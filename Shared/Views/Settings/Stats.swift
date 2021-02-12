@@ -53,7 +53,7 @@ struct StatsView: View {
         }
     }
     
-    struct StatsCard: View {
+    private struct StatsCard: View {
         private var stats: String
         private var label: String
         private var symbol: String

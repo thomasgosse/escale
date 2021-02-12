@@ -10,19 +10,23 @@ import MapKit
 
 
 struct MapTabView: View {
-    @ObservedObject var viewModel = MapTabViewModel()
+    @EnvironmentObject var userSettings: UserSettings
+    @State var searchLandmarks: [SearchLandmark] = []
+    @State var userLandmarks: [UserLandmark] = []
 
     var body: some View {
         ZStack(alignment: .topTrailing) {
-            MapView(searchLandmarks: $viewModel.searchLandmarks)
+            MapView(mapType: $userSettings.mapType, searchLandmarks: $searchLandmarks)
                 .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-            MapOverlay(searchLandmarks: $viewModel.searchLandmarks)
+            MapOverlay(searchLandmarks: $searchLandmarks)
         }
     }
 }
 
 struct MapOverlay: View {
     @EnvironmentObject var mapState: MapState
+    @EnvironmentObject var userSettings: UserSettings
+    @EnvironmentObject var locationManager: LocationManager
     @State var isSettingsPresented: Bool = false
     @State var isSearchPresented: Bool = false
     @State var query: String = ""
@@ -44,7 +48,7 @@ struct MapOverlay: View {
                     .accentColor(.systemGray),
                 action: settingsAction
             ) .sheet(isPresented: $isSettingsPresented, content: {
-                SettingsView()
+                SettingsView(userSettings, locationManager)
                     .accentColor(.purple)
             })
             .padding(.top, 20)
