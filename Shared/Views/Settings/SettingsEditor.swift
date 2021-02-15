@@ -14,17 +14,17 @@ struct SettingsEditorView: View {
     
     var body: some View {
         List {
-            Section(header: Text("Nom d'utilisateur")) {
-                TextField("Nom d'utilisateur", text: $userName)
+            Section(header: Text("Username")) {
+                TextField("Username", text: $userName)
             }
-            Section(header: Text("Type de carte")) {
+            Section(header: Text("Map type")) {
                 MapTypeSelectionView(draftMapType: $draftMapType)
             }
-            Section(header: Text("Accès à votre position")) {
+            Section(header: Text("Allow location access")) {
                 if let url = NSURL(string: UIApplication.openSettingsURLString) {
                     Link(destination: url as URL) {
                         HStack(alignment: .center, spacing: 5) {
-                            Text("Modifier dans les réglages")
+                            Text("Modify in settings")
                             Image(systemName: "gear")
                         }
                     }

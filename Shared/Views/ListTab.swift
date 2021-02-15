@@ -52,12 +52,12 @@ struct ListTabView: View {
                     .listStyle(InsetGroupedListStyle())
                 }
             }
-            .navigationTitle("Mes lieux")
+            .navigationTitle("My places")
             .toolbar {
                 ToolbarItem(placement: .principal) {
                     Picker(selection: $selectedVisited, label: Text("To visit or not?")) {
-                        Text("À visiter").tag(0)
-                        Text("Visités").tag(1)
+                        Text("To visit").tag(0)
+                        Text("Visited").tag(1)
                     }
                     .pickerStyle(SegmentedPickerStyle())
                 }
@@ -70,8 +70,7 @@ struct ListTabView: View {
     
     
     private func getCountryFromCode(_ code: String) -> String {
-        let current = Locale(identifier: "fr_FR")
-        return current.localizedString(forRegionCode: code) ?? "Other"
+        return Locale.current.localizedString(forRegionCode: code) ?? "Other"
     }
     
     private func deleteItem(_ offsets: IndexSet, _ items: [LocalLandmark]) {

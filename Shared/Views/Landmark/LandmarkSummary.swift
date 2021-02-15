@@ -16,24 +16,24 @@ struct LandmarkSummaryView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Informations du lieu")
+            Text("Place information")
                 .textCase(.uppercase)
                 .font(.footnote)
                 .foregroundColor(.secondaryLabel)
                 .padding([.leading])
             VStack(alignment: .leading, spacing: 7) {
-                TextLabel(landmark.title, "Nom")
+                TextLabel(landmark.title, "Name")
                 Divider()
-                TextLabel(landmark.subtitle, "Complément")
+                TextLabel(landmark.subtitle, "Details")
                 if let url = landmark.url, !url.absoluteString.isEmpty {
                     Divider()
                     VStack(alignment: .leading, spacing: 3) {
-                        Text("Lien").font(.subheadline).foregroundColor(.secondaryLabel)
+                        Text("Link").font(.subheadline).foregroundColor(.secondaryLabel)
                         Link(url.absoluteString, destination: url)
                         if !UIApplication.shared.canOpenURL(url) {
                             HStack {
                                 Image(systemName:"exclamationmark.triangle").foregroundColor(.yellow)
-                                Text("Ce lien n'est pas valide")
+                                Text("Invalid link")
                             }
                         }
                     }
@@ -41,7 +41,7 @@ struct LandmarkSummaryView: View {
                 
                 if !landmark.personalNote.isEmpty {
                     Divider()
-                    TextLabel(landmark.personalNote, "Note personnelle")
+                    TextLabel(landmark.personalNote, "Personal note")
                 }
             }
             .cardStyle(paddingX: 15, paddingY: 10)

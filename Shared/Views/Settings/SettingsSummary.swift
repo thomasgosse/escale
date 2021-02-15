@@ -25,12 +25,12 @@ struct SettingsSummaryView: View {
     var body: some View {
         VStack {
             VStack(alignment: .leading, spacing: 7) {
-                TextLabel(userName, "Nom d'utilisateur")
+                TextLabel(userName, "Username")
                 Divider()
-                TextLabel(mapTypeAsString, "Type de carte")
+                TextLabel(mapTypeAsString, "Map type")
                 Divider()
                 VStack(alignment: .leading, spacing: 3) {
-                    Text("Accès à votre position").font(.subheadline).foregroundColor(.secondaryLabel)
+                    Text("Allow location access").font(.subheadline).foregroundColor(.secondaryLabel)
                     HStack {
                         Text(statusAsString)
                         if status == .authorizedAlways || status == .authorizedWhenInUse {

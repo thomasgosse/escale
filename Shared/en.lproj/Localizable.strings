@@ -1,0 +1,40 @@
+/* 
+  Localizable.strings
+  Escale
+
+  Created by Thomas Gosse on 15/02/2021.
+  
+*/
+"New place" = "New place";
+"Cancel" = "Cancel";
+"Search place" = "Search for a place";
+"Places example" = "City, park, restaurant...";
+"Results" = "Results";
+"No results" = "No results";
+"Error: %@" = "Error: %@";
+"My places" = "My places";
+"To visit" = "To visit";
+"Visited" = "Visited";
+"Visited singular" = "Visited";
+"Other" = "Other";
+"Profile" = "Profile";
+"Username" = "Username";
+"Map type" = "Map type";
+"Allow location access" = "Allow location access";
+"Modify in settings" = "Modify in settings";
+"Unique countries" = "Countries";
+"Most visited" = "Most visited";
+"Location" = "Location";
+"Not visited" = "Not visited";
+"Name" = "Name";
+"Details" = "Details";
+"Link" = "Link";
+"Invalid link" = "This link is not valid";
+"Personal note" = "Personal note";
+"Place information" = "Informations";
+"Edit place" = "Edit Place";
+"Get directions" = "Get directions";
+"Map" = "Map";
+"List" = "List";
+"Link placeholder" = "Something that reminds you what makes you discover this place (Twitter, Instagram...)";
+"Personal note placeholder" = "Something that you don't want to forget about this place";

@@ -21,7 +21,7 @@ struct DirectionButton: View {
             item.openInMaps(launchOptions: options)
         }, label: {
             HStack {
-                Text("Obtenir l'itinéraire")
+                Text("Get directions")
                 Image(systemName: "car")
             }
         })

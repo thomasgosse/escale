@@ -47,7 +47,7 @@ struct TextView: View {
          text: Binding<String>,
          onEditingChanged: (() -> Void)? = nil,
          onCommit: (() -> Void)? = nil) {
-        self.title = title
+        self.title = NSLocalizedString(title, comment: "Placeholder")
         
         _text = text
         _isEmpty = State(initialValue: self.text.isEmpty)

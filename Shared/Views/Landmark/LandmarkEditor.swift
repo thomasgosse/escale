@@ -31,26 +31,26 @@ struct LandmarkEditorView: View {
     var body: some View {
         NavigationView {
             List {
-                Row(text: $title, name: "Nom")
-                Row(text: $subtitle, name: "Complément")
+                Row(text: $title, name: "Name")
+                Row(text: $subtitle, name: "Details")
                 
-                Section(header: Text("Lien")) {
-                    TextView("Un lien qui vous rappelle/vous a fait découvrir ce lieu (Twitter, Instagram...)",
+                Section(header: Text("Link")) {
+                    TextView("Link placeholder",
                              text: $urlString,
                              onCommit: onCommit)
                     if let url = URL(string: urlString) {
                         if !UIApplication.shared.canOpenURL(url) {
                             HStack {
                                 Image(systemName:"exclamationmark.triangle").foregroundColor(.yellow)
-                                Text("Ce lien n'est pas valide")
+                                Text("Invalid link")
                             }
                         }
                     }
                 }
                 .disableAutocorrection(true)
                 
-                Section(header: Text("Note personnelle")) {
-                    TextView("Écrivez quelque chose que vous ne voulez pas oublier de ce lieu",
+                Section(header: Text("Personal note")) {
+                    TextView("Personal note placeholder",
                              text: $personalNote,
                              onCommit: onCommit)
                 }
@@ -58,7 +58,7 @@ struct LandmarkEditorView: View {
             .listStyle(InsetGroupedListStyle())
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Annuler") { presentationMode.wrappedValue.dismiss() }
+                    Button("Cancel") { presentationMode.wrappedValue.dismiss() }
                 }
             }
             .navigationBarItems(trailing: Button("Done", action: {
@@ -68,7 +68,7 @@ struct LandmarkEditorView: View {
                 landmark.url = URL(string: self.urlString)
                 presentationMode.wrappedValue.dismiss()
             }))
-            .navigationTitle("Éditer")
+            .navigationTitle("Edit place")
         }
         .accentColor(.purple)
     }
@@ -78,7 +78,7 @@ struct LandmarkEditorView: View {
         var name: String
         
         var body: some View {
-            Section(header: Text(name)) {
+            Section(header: Text(NSLocalizedString(name, comment: "Field section header"))) {
                 TextField(name, text: $text)
             }
         }

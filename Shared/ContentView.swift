@@ -19,14 +19,14 @@ struct ContentView: View {
             MapTabView()
                 .tabItem {
                     Image(systemName:"map.fill")
-                    Text("Carte")
+                    Text("Map")
                 }
                 .tag(0)
                 .accentColor(.blue)
             ListTabView(selectedTab: $selectedTab)
                 .tabItem {
                     Image(systemName:"mappin")
-                    Text("Liste")
+                    Text("List")
                 }
                 .tag(1)
                 .accentColor(.purple)

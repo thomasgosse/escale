@@ -19,7 +19,7 @@ struct TextLabel: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 3) {
-            Text(label).font(.subheadline).foregroundColor(.secondaryLabel)
+            Text(NSLocalizedString(label, comment: "Label for the field")).font(.subheadline).foregroundColor(.secondaryLabel)
             Text(text)
         }
     }

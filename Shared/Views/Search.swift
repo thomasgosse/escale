@@ -24,9 +24,9 @@ struct SearchView: View {
         NavigationView {
             VStack {
                 Form {
-                    Section(header: Text("Rechercher un lieu")) {
+                    Section(header: Text("Search place")) {
                         ZStack(alignment: .trailing) {
-                            TextField("Ville, parc, restaurant...", text: $viewModel.queryFragment)
+                            TextField("Places example", text: $viewModel.queryFragment)
                                 .onChange(of: viewModel.queryFragment) { (_) in
                                     viewModel.region = mapState.region
                                 }
@@ -36,12 +36,12 @@ struct SearchView: View {
                             }
                         }
                     }
-                    if viewModel.results.count > 0 {
-                        Section(header: Text("Résultats")) {
+                    if viewModel.status != .pending && viewModel.status != .idle {
+                        Section(header: Text("Results")) {
                             List {
                                 switch viewModel.status {
-                                case .noResult: AnyView(Text("Pas de résultat")).foregroundColor(.secondaryLabel)
-                                case .error(let description): AnyView(Text("Erreur: \(description)")).foregroundColor(.red)
+                                case .noResult: AnyView(Text("No results")).foregroundColor(.secondaryLabel)
+                                case .error(let description): AnyView(Text("Error: \(description)")).foregroundColor(.red)
                                 default: EmptyView()
                                 }
                                 ForEach(viewModel.results, id: \.self) { completionResult in
@@ -61,13 +61,15 @@ struct SearchView: View {
                     }
                 }
             }
-            .navigationBarTitle("Nouveau lieu")
+            .navigationBarTitle("New place")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Annuler", action: {
+                    Button("Cancel", action: {
                         presentationMode.wrappedValue.dismiss()
                     })
                 }
+            }.onChange(of: viewModel.status) { (val) in
+                print(val)
             }
         }
     }

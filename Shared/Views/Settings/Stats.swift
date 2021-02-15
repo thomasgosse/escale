@@ -33,9 +33,8 @@ struct StatsView: View {
     private var mostVisitedCountry: String {
         let landmark = Dictionary(grouping: localLandmarks, by: {$0.countryCode ?? "N/A"})
             .max { a,b in a.value.filter{$0.visited}.count < b.value.filter{$0.visited}.count }
-        let current = Locale(identifier: "fr_FR")
         if let key = landmark?.key {
-            return current.localizedString(forRegionCode: key) ?? "N/A"
+            return Locale.current.localizedString(forRegionCode: key) ?? "N/A"
         }
         return "N/A"
     }
@@ -43,12 +42,12 @@ struct StatsView: View {
     var body: some View {
         VStack(spacing: 10) {
             HStack(spacing: 10) {
-                StatsCard(visitedCount, "Visités", "checkmark.circle.fill", .purple)
-                StatsCard(toVisitCount, "À visiter", "eyes.inverse", .pink)
+                StatsCard(visitedCount, "Visited", "checkmark.circle.fill", .purple)
+                StatsCard(toVisitCount, "To visit", "eyes.inverse", .pink)
             }
             HStack(spacing: 10) {
-                StatsCard(uniqueCountriesCount, "Pays différents", "globe", .green)
-                StatsCard(mostVisitedCountry, "Le plus visité", "heart.fill", .orange)
+                StatsCard(uniqueCountriesCount, "Unique countries", "globe", .green)
+                StatsCard(mostVisitedCountry, "Most visited", "heart.fill", .orange)
             }
         }
     }
@@ -74,7 +73,7 @@ struct StatsView: View {
                     HStack(alignment: .center) {
                         Image(systemName: symbol)
                             .font(Font.system(size: 20, weight: .medium))
-                        Text(label)
+                        Text(NSLocalizedString(label, comment: "Label for the field"))
                             .font(.subheadline)
                     }
                     .foregroundColor(.white)

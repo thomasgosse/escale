@@ -45,19 +45,17 @@ struct SettingsView: View {
                 if !editMode {
                     SettingsSummaryView(locationManager.status, locationManager.statusAsString, userSettings.mapTypeAsString, userName)
                         .transition(.slide)
-                        .animation(.default)
                         .zIndex(2)
                 } else {
                     SettingsEditorView(draftMapType: $draftMapType, userName: $draftUserName)
                         .transition(.slide)
-                        .animation(.default)
                         .zIndex(1)
                 }
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     if editMode {
-                        Button("Annuler", action: {
+                        Button("Cancel", action: {
                             withAnimation {
                                 draftMapType = userSettings.mapType
                                 draftUserName = userName
@@ -78,7 +76,7 @@ struct SettingsView: View {
                     })
                 }
             }
-            .navigationTitle("Profil")
+            .navigationTitle("Profile")
             .onAppear {
                 draftUserName = userName
             }

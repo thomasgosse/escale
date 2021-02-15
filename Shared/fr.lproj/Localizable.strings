@@ -1,0 +1,40 @@
+/* 
+  Localizable.strings
+  Escale
+
+  Created by Thomas Gosse on 15/02/2021.
+  
+*/
+"New place" = "Nouveau lieu";
+"Cancel" = "Annuler";
+"Search place" = "Rechercher un lieu";
+"Places example" = "Ville, parc, restaurant...";
+"Results" = "Résultats";
+"No results" = "Pas de résultat";
+"Error: %@" = "Erreur: %@";
+"My places" = "Mes lieux";
+"To visit" = "À visiter";
+"Visited" = "Visités";
+"Visited singular" = "Visité";
+"Other" = "Autre";
+"Profile" = "Profil";
+"Username" = "Nom d'utilisateur";
+"Map type" = "Type de carte";
+"Allow location access" = "Accès à votre position";
+"Modify in settings" = "Modifier dans les réglages";
+"Unique countries" = "Pays différents";
+"Most visited" = "Le plus visité";
+"Location" = "Localisation";
+"Not visited" = "Non visité";
+"Name" = "Nom";
+"Details" = "Compléments";
+"Link" = "Lien";
+"Invalid link" = "Ce lien n'est pas valide";
+"Personal note" = "Note personnelle";
+"Place information" = "Informations du lieu";
+"Edit place" = "Éditer";
+"Get directions" = "Obtenir l'itinéraire";
+"Map" = "Carte";
+"List" = "Liste";
+"Link placeholder" = "Un lien qui vous rappelle/vous a fait découvrir ce lieu (Twitter, Instagram...)";
+"Personal note placeholder" = "Écrivez quelque chose que vous ne voulez pas oublier de ce lieu";
