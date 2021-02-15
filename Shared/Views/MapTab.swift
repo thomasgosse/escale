@@ -26,7 +26,7 @@ struct MapTabView: View {
                 .edgesIgnoringSafeArea(.all)
                 .sheet(isPresented: $isPresented, content: {
                     NavigationView {
-                        LandmarkDetailView(landmark: clickedLandmark!, onTapMap: onTapMap)
+                        LandmarkDetailView(landmark: clickedLandmark!, onTapMap: onTapMap, titleDisplayMode: .inline)
                     }.accentColor(.purple)
                 })
                 .onChange(of: clickedLandmark, perform: { value in

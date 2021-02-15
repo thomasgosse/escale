@@ -16,15 +16,17 @@ struct LandmarkDetailView: View {
     @ObservedObject var landmark: LocalLandmark
     
     @Binding var selectedTab: Int
+    var titleDisplayMode: NavigationBarItem.TitleDisplayMode
     @State private var isVisited: Bool
     @State private var isModifying = false
     private var onTapMap: (() -> Void)?
         
-    init(landmark: LocalLandmark, selectedTab: Binding<Int>? = nil, onTapMap: (() -> Void)? = nil) {
+    init(landmark: LocalLandmark, selectedTab: Binding<Int>? = nil, onTapMap: (() -> Void)? = nil, titleDisplayMode: NavigationBarItem.TitleDisplayMode? = nil) {
         self.landmark = landmark
         _isVisited = .init(initialValue: landmark.visited)
         self._selectedTab = selectedTab ?? .constant(0)
         self.onTapMap = onTapMap
+        self.titleDisplayMode = titleDisplayMode ?? .automatic
     }
     
     var body: some View {
@@ -72,7 +74,7 @@ struct LandmarkDetailView: View {
                 .sheet(isPresented: $isModifying) {
                     LandmarkEditorView(landmark)
                 }
-                .navigationTitle(landmark.title)
+                .navigationBarTitle(landmark.title, displayMode: titleDisplayMode)
                 .onWillDisappear { saveModifications() }
             }
         }
