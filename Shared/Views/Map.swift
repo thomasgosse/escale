@@ -13,11 +13,12 @@ struct MapView: UIViewRepresentable {
     @Environment(\.managedObjectContext) private var viewContext
     @EnvironmentObject private var mapState: MapState
     @Binding var mapType: MKMapType
-
+    @Binding var searchLandmarks: [SearchLandmark]
+    @Binding var clickedLandmark: LocalLandmark?
+    
     @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \LocalLandmark.title, ascending: true)])
     private var localLandmarks: FetchedResults<LocalLandmark>
     
-    @Binding var searchLandmarks: [SearchLandmark]
     var didCenterToUserLocation = false
     
     class Coordinator: NSObject, MKMapViewDelegate {
@@ -55,8 +56,9 @@ struct MapView: UIViewRepresentable {
             if let landmark = view.annotation as? SearchLandmark {
                 self.parent.searchLandmarks = []
                 createLocalLandmark(landmark: landmark)
-            } else if view.annotation is UserLandmark {
-                print("Informations //TODO")
+            } else if view.annotation is UserLandmark, let landmark = view.annotation as? UserLandmark {
+                let clickedLandmark = self.parent.localLandmarks.first { $0.id == landmark.id }
+                self.parent.clickedLandmark = clickedLandmark
             }
         }
     }
@@ -223,7 +225,7 @@ extension MapView.Coordinator {
                 annotationView?.markerTintColor = landmark.visited ? .gray : .purple
                 annotationView?.displayPriority = .required
             }
-           
+            
         }
         return annotationView
     }

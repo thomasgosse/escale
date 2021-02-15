@@ -18,11 +18,13 @@ struct LandmarkDetailView: View {
     @Binding var selectedTab: Int
     @State private var isVisited: Bool
     @State private var isModifying = false
+    private var onTapMap: (() -> Void)?
         
-    init(landmark: LocalLandmark, selectedTab: Binding<Int>) {
+    init(landmark: LocalLandmark, selectedTab: Binding<Int>? = nil, onTapMap: (() -> Void)? = nil) {
         self.landmark = landmark
         _isVisited = .init(initialValue: landmark.visited)
-        self._selectedTab = selectedTab
+        self._selectedTab = selectedTab ?? .constant(0)
+        self.onTapMap = onTapMap
     }
     
     var body: some View {
@@ -35,7 +37,7 @@ struct LandmarkDetailView: View {
                 }
                 ScrollView {
                     VStack(alignment: .leading) {
-                        Text("Localisation")
+                        Text("Location")
                             .textCase(.uppercase)
                             .font(.footnote)
                             .foregroundColor(.secondaryLabel)
@@ -47,10 +49,11 @@ struct LandmarkDetailView: View {
                                 .onTapGesture {
                                     mapState.focusLandmark = landmark
                                     selectedTab = 0
+                                    onTapMap?()
                                 }
                             Toggle(isOn: $isVisited.animation()) {
-                                if isVisited { Text("Visité") }
-                                else { Text("Non visité") }
+                                if isVisited { Text("Visited singular") }
+                                else { Text("Not visited") }
                             }
                             .transition(.opacity)
                             .padding([.leading, .trailing], 5)
@@ -63,7 +66,7 @@ struct LandmarkDetailView: View {
                 }
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        Button("Modifier", action: { isModifying.toggle() })
+                        Button("Edit", action: { isModifying.toggle() })
                     }
                 }
                 .sheet(isPresented: $isModifying) {

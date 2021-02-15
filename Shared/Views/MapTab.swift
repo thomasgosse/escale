@@ -13,11 +13,32 @@ struct MapTabView: View {
     @EnvironmentObject var userSettings: UserSettings
     @State var searchLandmarks: [SearchLandmark] = []
     @State var userLandmarks: [UserLandmark] = []
-
+    @State var isPresented = false
+    @State var clickedLandmark: LocalLandmark?
+    
+    func onTapMap() {
+        self.isPresented = false
+    }
+    
     var body: some View {
         ZStack(alignment: .topTrailing) {
-            MapView(mapType: $userSettings.mapType, searchLandmarks: $searchLandmarks)
-                .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            MapView(mapType: $userSettings.mapType, searchLandmarks: $searchLandmarks, clickedLandmark: $clickedLandmark)
+                .edgesIgnoringSafeArea(.all)
+                .sheet(isPresented: $isPresented, content: {
+                    NavigationView {
+                        LandmarkDetailView(landmark: clickedLandmark!, onTapMap: onTapMap)
+                    }.accentColor(.purple)
+                })
+                .onChange(of: clickedLandmark, perform: { value in
+                    if value != nil {
+                        isPresented = true
+                    }
+                })
+                .onChange(of: isPresented, perform: { value in
+                    if !value {
+                        clickedLandmark = nil
+                    }
+                })
             MapOverlay(searchLandmarks: $searchLandmarks)
         }
     }
