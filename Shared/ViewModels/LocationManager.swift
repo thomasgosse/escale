@@ -28,13 +28,13 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         
         switch status {
         case .denied:
-            statusAsString = "Jamais"
+            statusAsString = NSLocalizedString("Never", comment: "Location access is denied")
         case .authorizedWhenInUse:
-            statusAsString = "Lorsque l'app est active"
+            statusAsString = NSLocalizedString("Location in use", comment: "Location access authorize while app is in use")
         case .authorizedAlways:
-            statusAsString = "Toujours"
+            statusAsString = NSLocalizedString("Always", comment: "Location access authorized always")
         default:
-            statusAsString = "Non determiné"
+            statusAsString = NSLocalizedString("Not determined", comment: "Location access not determined")
         }
     }
 }

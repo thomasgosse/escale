@@ -38,3 +38,13 @@
 "List" = "Liste";
 "Link placeholder" = "Un lien qui vous rappelle/vous a fait découvrir ce lieu (Twitter, Instagram...)";
 "Personal note placeholder" = "Écrivez quelque chose que vous ne voulez pas oublier de ce lieu";
+"Empty list title" = "Pour le moment, il n'y a aucun lieu enregistré dans ta liste";
+"Empty list subtitle" = "Ajoutes-en un pour commencer !";
+"Empty list button" = "Chercher un endroit";
+"No visited places title" = "Des lieux sont enregistrés dans ta liste, mais pas encore visités";
+"No visited places subtitle" = "Visite en un et il apparaîtra ici !";
+"No visited places button" = "Visiter un lieu";
+"Never" = "Jamais";
+"Location in use" = "Lorsque l'app est active";
+"Always" = "Toujours";
+"Not determined" = "Non determiné";

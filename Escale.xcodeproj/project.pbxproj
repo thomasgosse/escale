@@ -10,6 +10,8 @@
 		58013BE925B899A200BEDA94 /* OnWillDisappear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58013BE825B899A200BEDA94 /* OnWillDisappear.swift */; };
 		58013BEA25B899A200BEDA94 /* OnWillDisappear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58013BE825B899A200BEDA94 /* OnWillDisappear.swift */; };
 		5807BD8A25A66BFC0018324C /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5807BD8925A66BFC0018324C /* Landmark.swift */; };
+		5808000325DB173300CD794C /* EmptyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808000225DB173300CD794C /* EmptyList.swift */; };
+		5808000425DB173300CD794C /* EmptyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808000225DB173300CD794C /* EmptyList.swift */; };
 		58241C9C25BF20FC00126BED /* DirectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58241C9B25BF20FC00126BED /* DirectionButton.swift */; };
 		58241C9D25BF20FC00126BED /* DirectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58241C9B25BF20FC00126BED /* DirectionButton.swift */; };
 		5827696E25B1BF8A0041AFE7 /* LandmarkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5827696D25B1BF8A0041AFE7 /* LandmarkDetail.swift */; };
@@ -95,6 +97,7 @@
 /* Begin PBXFileReference section */
 		58013BE825B899A200BEDA94 /* OnWillDisappear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnWillDisappear.swift; sourceTree = "<group>"; };
 		5807BD8925A66BFC0018324C /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
+		5808000225DB173300CD794C /* EmptyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyList.swift; sourceTree = "<group>"; };
 		58241C9B25BF20FC00126BED /* DirectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionButton.swift; sourceTree = "<group>"; };
 		5827696D25B1BF8A0041AFE7 /* LandmarkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetail.swift; sourceTree = "<group>"; };
 		58282BC825A5E908008208CF /* MapTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTab.swift; sourceTree = "<group>"; };
@@ -293,6 +296,7 @@
 				58D4C04925D1C826009AF105 /* Settings */,
 				5865697E25BB134F00B896E5 /* Landmark */,
 				58E6316F25A664AD00A75ED4 /* Components */,
+				5808000225DB173300CD794C /* EmptyList.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -518,6 +522,7 @@
 				58B2B53225AF42D50055ED1A /* Model.xcdatamodeld in Sources */,
 				588C469D25A4AF81002CF864 /* Search.swift in Sources */,
 				583F219025D6B99C000A672F /* LocalLandmark+CoreDataProperties.swift in Sources */,
+				5808000325DB173300CD794C /* EmptyList.swift in Sources */,
 				584B394C25AF3CF30024CFBB /* Persistence.swift in Sources */,
 				58241C9C25BF20FC00126BED /* DirectionButton.swift in Sources */,
 				583A312C25A5E4E700D5ECD1 /* SearchViewModel.swift in Sources */,
@@ -546,6 +551,7 @@
 				58282BCA25A5E908008208CF /* MapTab.swift in Sources */,
 				58F96C7325D6C30200B00ED6 /* MapTypeSelection.swift in Sources */,
 				58F6C48825D090E0001C0863 /* Stats.swift in Sources */,
+				5808000425DB173300CD794C /* EmptyList.swift in Sources */,
 				58471E5625A2255400629DB1 /* Escale.swift in Sources */,
 				588C469E25A4AF81002CF864 /* Search.swift in Sources */,
 				58491DF025CDB47D00D0C4CD /* TextView.swift in Sources */,
@@ -723,7 +729,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 23;
+				CURRENT_PROJECT_VERSION = 24;
 				DEVELOPMENT_TEAM = B6JWT5LX98;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
@@ -747,7 +753,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 23;
+				CURRENT_PROJECT_VERSION = 24;
 				DEVELOPMENT_TEAM = B6JWT5LX98;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;

@@ -29,7 +29,8 @@ struct ListTabView: View {
         NavigationView {
             VStack {
                 if filteredSections.isEmpty {
-                    EmptyList(selectedTab: $selectedTab)
+                    EmptyList(selectedTab: $selectedTab, selectedVisited: $selectedVisited,
+                              hasPlaces: localLandmarks.count > 0)
                 } else {
                     List {
                         ForEach(filteredSections, id: \.key) { code, items in
@@ -68,7 +69,6 @@ struct ListTabView: View {
         }
     }
     
-    
     private func getCountryFromCode(_ code: String) -> String {
         return Locale.current.localizedString(forRegionCode: code) ?? "Other"
     }
@@ -79,18 +79,6 @@ struct ListTabView: View {
                 mapState.deletedLandmark = items[index]
                 viewContext.delete(items[index])
             }
-        }
-    }
-}
-
-
-struct EmptyList: View {
-    @Binding var selectedTab: Int
-    
-    var body: some View {
-        Text("Tu n'as pas encore ajouté de lieux...")
-        Button("Ajoutes-en un !") {
-            selectedTab = 0
         }
     }
 }

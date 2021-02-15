@@ -38,3 +38,13 @@
 "List" = "List";
 "Link placeholder" = "Something that reminds you what makes you discover this place (Twitter, Instagram...)";
 "Personal note placeholder" = "Something that you don't want to forget about this place";
+"Empty list title" = "At the moment, there are no places saved in your list";
+"Empty list subtitle" = "Add one to start the journey !";
+"Empty list button" = "Look for a place";
+"No visited places title" = "You have places saved but not visited yet";
+"No visited places subtitle" = "Start to visit one and it will appear here !";
+"No visited places button" = "Visit a place";
+"Never" = "Never";
+"Location in use" = "While Using the App";
+"Always" = "Always";
+"Not determined" = "Not determined";
