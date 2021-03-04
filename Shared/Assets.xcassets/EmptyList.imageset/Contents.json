@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "bermuda-785.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "empty-list.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

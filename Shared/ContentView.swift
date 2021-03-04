@@ -77,7 +77,7 @@ class UserSettings: ObservableObject {
         case .satellite:
             return "Satellite"
         default:
-            return "Autre"
+            return "Other"
         }
     }
 }

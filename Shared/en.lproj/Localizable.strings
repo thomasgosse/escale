@@ -5,6 +5,8 @@
   Created by Thomas Gosse on 15/02/2021.
   
 */
+"Edit" = "Edit";
+"Done" = "Done";
 "New place" = "New place";
 "Cancel" = "Cancel";
 "Search place" = "Search for a place";
@@ -48,3 +50,4 @@
 "Location in use" = "While Using the App";
 "Always" = "Always";
 "Not determined" = "Not determined";
+"Contribute" = "Contribute";

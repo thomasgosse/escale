@@ -44,7 +44,7 @@ struct SettingsSummaryView: View {
             .cardStyle(paddingX: 15, paddingY: 10)
             StatsView()
                 .padding([.leading, .trailing, .bottom])
-            NavigationLink("Contribuer", destination: Text("Contribution"))
+            NavigationLink("Contribute", destination: Text("Nothing here for now !"))
                 .cardStyle(paddingX: 15, paddingY: 15)
         }
     }

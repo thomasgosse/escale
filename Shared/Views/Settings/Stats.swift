@@ -32,6 +32,9 @@ struct StatsView: View {
     
     private var mostVisitedCountry: String {
         let landmark = Dictionary(grouping: localLandmarks, by: {$0.countryCode ?? "N/A"})
+            .filter({ (key, value) in
+                return value.filter({$0.visited}).count > 0
+            })
             .max { a,b in a.value.filter{$0.visited}.count < b.value.filter{$0.visited}.count }
         if let key = landmark?.key {
             return Locale.current.localizedString(forRegionCode: key) ?? "N/A"
